@@ -15,7 +15,6 @@ public class ConfigFileReader {
 
 	public ConfigFileReader() {
 		try {
-
 			FileInputStream reader = new FileInputStream(propertyFilePath);
 			pro = new Properties();
 			try {
