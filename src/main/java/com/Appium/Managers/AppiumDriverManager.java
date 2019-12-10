@@ -25,7 +25,6 @@ public class AppiumDriverManager {
 		environmentType = FileReaderManager.getInstance().getConfigReader().getEnvironment();
 
 	}
-
 	public AppiumDriver<MobileElement> getDriver() throws IOException {
 
 		if (driver == null) {
