@@ -1,4 +1,4 @@
-package com.Appium.utility;
+package com.Appium.Managers;
 
 import com.Appium.pageobjects.Add_two_numbers;
 import com.Appium.pageobjects.Webapp;

@@ -7,7 +7,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import com.Appium.utility.FileReaderManager;
+import com.Appium.Managers.FileReaderManager;
 import com.Appium.utility.Log;
 import com.cucumber.listener.Reporter;
 

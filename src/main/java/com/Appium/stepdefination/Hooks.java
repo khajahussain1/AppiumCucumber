@@ -6,7 +6,7 @@ import java.io.IOException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.Appium.utility.ManagerReader;
+import com.Appium.utility.TestContext;
 import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 
@@ -15,11 +15,11 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class Hooks {
-	ManagerReader managerReader;
+	TestContext testContext;
 
-	public Hooks(ManagerReader reader) {
+	public Hooks(TestContext context) {
 		
-		managerReader = reader;
+		testContext = context;
 	}
 
 	@Before
@@ -39,7 +39,7 @@ public class Hooks {
 
 			try {
 
-				File sourcePath = ((TakesScreenshot) managerReader.getWebDriverManager().getDriver())
+				File sourcePath = ((TakesScreenshot) testContext.getappiumDriverManager().getDriver())
 						.getScreenshotAs(OutputType.FILE);
 
 				File destinationPath = new File(
@@ -59,7 +59,7 @@ public class Hooks {
 	@After(order = 0)
 	public void AfterSteps() {
 		
-		managerReader.getWebDriverManager().closeDriver();
+		testContext.getappiumDriverManager().closeDriver();
 	}
 
 }

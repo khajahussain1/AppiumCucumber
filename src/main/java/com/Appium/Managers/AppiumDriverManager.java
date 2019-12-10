@@ -1,4 +1,4 @@
-package com.Appium.utility;
+package com.Appium.Managers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,13 +13,13 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class WebDriverManager {
+public class AppiumDriverManager {
 
 	private AppiumDriver<MobileElement> driver;
 	private static AppType appType;
 	private static EnvironmentType environmentType;
 
-	public WebDriverManager() throws IOException {
+	public AppiumDriverManager() throws IOException {
 
 		appType = FileReaderManager.getInstance().getConfigReader().getapp();
 		environmentType = FileReaderManager.getInstance().getConfigReader().getEnvironment();

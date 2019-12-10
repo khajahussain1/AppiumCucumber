@@ -1,4 +1,4 @@
-package com.Appium.utility;
+package com.Appium.Managers;
 
 import java.io.IOException;
 

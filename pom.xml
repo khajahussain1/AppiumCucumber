@@ -32,7 +32,7 @@
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
 						<!-- <suiteXmlFile>Multiple.xml</suiteXmlFile> -->
-						<suiteXmlFile>Khaja.xml</suiteXmlFile>
+						<suiteXmlFile>Testng.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
 
 

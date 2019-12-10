@@ -4,10 +4,7 @@ import java.util.Map;
 
 import com.Appium.pageobjects.Add_two_numbers;
 import com.Appium.pageobjects.Webapp;
-import com.Appium.utility.ConfigFileReader;
-import com.Appium.utility.ManagerReader;
-import com.Appium.utility.PageObjectManager;
-import com.Appium.utility.WebDriverManager;
+import com.Appium.utility.TestContext;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
@@ -20,37 +17,25 @@ public class Stepdefination {
 	AppiumDriver<MobileElement> driver;
 
 	Add_two_numbers twonumbers;
-	
+
 	Webapp webapp;
 
-	PageObjectManager pageObjectManager;
-	
-	ConfigFileReader configFileReader;
-	
-	WebDriverManager webDriverManager;
-	
-	ManagerReader managerReader;
-	
-	public Stepdefination(ManagerReader reader)
-	{
-		managerReader = reader;
-		twonumbers = managerReader.getPageObjectManager().getadd_two_numbers();
-		webapp = managerReader.getPageObjectManager().getwebapp();
+	TestContext testContext;
+
+	public Stepdefination(TestContext context) {
+		testContext = context;
+		twonumbers = testContext.getPageObjectManager().getadd_two_numbers();
+		webapp = testContext.getPageObjectManager().getwebapp();
 	}
 
 	@Given("^Launch the application in mobile \"([^\"]*)\"$")
 	public void launch_the_application_in_mobile(String apptype) throws Throwable {
-//		webDriverManager = new WebDriverManager();
-//		driver = webDriverManager.getDriver();
-//		//Testbase.launchapp(apptype);
-//		pageObjectManager = new PageObjectManager(driver);
 
 	}
 
 	@Then("^Click on number seven$")
 	public void click_on_number_seven() {
 
-		//twonumbers = pageObjectManager.getadd_two_numbers();
 		twonumbers.setnumberseven();
 	}
 
@@ -72,15 +57,15 @@ public class Stepdefination {
 	@Then("^Pass the value as \"([^\"]*)\"$")
 	public void pass_the_value_as(String appium) throws InterruptedException {
 	}
-	
+
 	@Given("^user enters credentials to the login$")
 	public void user_enters_credentials_to_the_login(DataTable usercredentials) throws Throwable {
-		for(Map<String, String> data : usercredentials.asMaps(String.class, String.class)) {
-		
-		System.out.println(data.get("Username"));
-		System.out.println(data.get("Password"));
+		for (Map<String, String> data : usercredentials.asMaps(String.class, String.class)) {
+
+			System.out.println(data.get("Username"));
+			System.out.println(data.get("Password"));
 		}
-	    
+
 	}
 
 }
