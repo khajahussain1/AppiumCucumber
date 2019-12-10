@@ -25,7 +25,6 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 public class Add_two_number extends AbstractTestNGCucumberTests {
 
 	String testcasename;
-
 	@BeforeClass
 	public void beforeclass() {
 
