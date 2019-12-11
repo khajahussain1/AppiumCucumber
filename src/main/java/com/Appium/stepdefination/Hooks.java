@@ -25,7 +25,7 @@ public class Hooks {
 	@Before
 	public void BeforeSteps() {
 		
-		Reporter.assignAuthor("KHAJA HUSSAIN");
+		//Reporter.assignAuthor("KHAJA HUSSAIN");
 	}
 
 	@After(order = 1)

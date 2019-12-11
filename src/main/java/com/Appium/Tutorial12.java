@@ -7,8 +7,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -83,9 +81,9 @@ public class Tutorial12 {
 
 	public void verticalSwipe() {
 		MobileElement element = driver.findElementByAccessibilityId("Tabs");
-		TouchActions action = new TouchActions(driver);
+		/*TouchActions action = new TouchActions(driver);
 		action.scroll(element, 10, 100);
-		action.perform();
+		action.perform();*/
 		
 		/*Dimension size = driver.manage().window().getSize();
 		int height = dim.getHeight();

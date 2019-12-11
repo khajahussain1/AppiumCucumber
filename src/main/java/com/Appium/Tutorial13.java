@@ -81,7 +81,7 @@ public class Tutorial13 {
 		int y = (int) (height * 0.20);
 		int startx = (int) (width * 0.75);
 		int endx = (int) (width * 0.35);
-		//driver.swipe(startx, y, endx, y, 500);
+		//driver.scroll(startx, y, endx, y, 500);
 	}
 
 	public void verticalSwipe() {

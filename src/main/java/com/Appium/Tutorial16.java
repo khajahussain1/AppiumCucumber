@@ -8,7 +8,6 @@ import java.net.URL;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -31,8 +30,8 @@ public class Tutorial16 {
 		System.out.println("Session is creating");
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability("platformName", "Android");
-		cap.setCapability("platformVersion", "4.4.4");
-		cap.setCapability("deviceName", "HTC Desire 626 dual sim");
+		cap.setCapability("platformVersion", "9");
+		cap.setCapability("deviceName", "realme 3 Pro");
 		cap.setCapability("app", System.getProperty("user.dir") + "/src/test/resources/app/ApiDemos.apk");
 		URL url = new URL("http://0.0.0.0:4723/wd/hub");
 
@@ -130,8 +129,13 @@ driver.quit();
 	}
 
 	public void verticalSwipe() {
-		
-		Dimension dim = driver.manage().window().getSize();
+		MobileElement element = driver.findElementByAccessibilityId("WebView");
+		/*TouchActions action = new TouchActions(driver);
+		action.scroll(element, 10, 100);
+		action.perform();*/
+
+
+		/*Dimension dim = driver.manage().window().getSize();
 		
 		int height = dim.getHeight();
 		
@@ -141,7 +145,7 @@ driver.quit();
 		
 		int starty = (int) (height * 0.80);
 		
-		int endy = (int) (height * 0.20);
+		int endy = (int) (height * 0.20);*/
 		
 		//driver.swipe(x, starty, x, endy, 500);
 
