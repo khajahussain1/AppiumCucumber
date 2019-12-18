@@ -27,14 +27,14 @@ public class Tutorial9 {
 		cap.setCapability("deviceName", "realme 3 Pro");
 		cap.setCapability("platformVersion", "9");
 		cap.setCapability("udid", "159b3828");
-		//cap.setCapability("automationName", "UiAutomator1");
+		cap.setCapability("automationName", "UiAutomator2");
 		
-		cap.setCapability("appPackage", "com.coloros.calculator");
-		cap.setCapability("appActivity", "com.android.calculator2.Calculator");
+		//cap.setCapability("appPackage", "com.coloros.calculator");
+		//cap.setCapability("appActivity", "com.android.calculator2.Calculator");
 		//cap.setCapability("appPackage", "com.android.chrome");
 		//cap.setCapability("appPackage", "com.google.android.apps.chrome.Main");
-		//cap.setCapability("appPackage", "in.amazon.mShop.android.shopping");
-		//cap.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
+		cap.setCapability("appPackage", "in.amazon.mShop.android.shopping");
+		cap.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
 		//cap.setCapability("app", System.getProperty("user.dir") + "/src/test/resources/app/ApiDemos.apk");
 		URL url= new URL("http://0.0.0.0:4723/wd/hub");
 		driver = new AndroidDriver<MobileElement>(url, cap);

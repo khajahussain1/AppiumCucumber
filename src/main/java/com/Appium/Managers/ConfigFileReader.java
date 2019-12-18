@@ -110,6 +110,38 @@ public class ConfigFileReader {
 					"Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");
 		}
 	}
+	
+	
+	public String getautomation() {
+
+		String automationname = pro.getProperty("AUTOMATIONNAME");
+
+		if (automationname != null) {
+
+			return automationname;
+
+		} else {
+
+			throw new RuntimeException(
+					"Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");
+		}
+	}
+	
+		
+	public String getplatformversion() {
+
+		String platformversion = pro.getProperty("PLATFORMVERSION");
+
+		if (platformversion != null) {
+
+			return platformversion;
+
+		} else {
+
+			throw new RuntimeException(
+					"Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");
+		}
+	}
 
 	public String getploatform() {
 
@@ -167,6 +199,22 @@ public class ConfigFileReader {
 
 			throw new RuntimeException(
 					"devicename not specified in the Configuration.properties file for the Key:reportConfigPath");
+		}
+	}
+	
+	public String getudid()
+	{
+		String udid = pro.getProperty("UDID");
+		
+		if(udid!=null)
+		{
+			return udid;
+			
+		}
+		else {
+
+			throw new RuntimeException(
+					"udid not specified in the Configuration.properties file for the Key:reportConfigPath");
 		}
 	}
 	

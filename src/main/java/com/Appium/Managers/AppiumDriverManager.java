@@ -25,6 +25,7 @@ public class AppiumDriverManager {
 		environmentType = FileReaderManager.getInstance().getConfigReader().getEnvironment();
 
 	}
+
 	public AppiumDriver<MobileElement> getDriver() throws IOException {
 
 		if (driver == null) {
@@ -56,35 +57,44 @@ public class AppiumDriverManager {
 	private AppiumDriver<MobileElement> createLocalDriver() throws IOException {
 
 		if (FileReaderManager.getInstance().getConfigReader().getploatform().equals("ANDROID")) {
-			
+			DesiredCapabilities cap = new DesiredCapabilities();
+
 			if (appType.name().equals("NATIVE")) {
 
-				DesiredCapabilities cap = new DesiredCapabilities();
-				
 				cap.setCapability("platformName", "Android");
-				
+
 				cap.setCapability("deviceName", FileReaderManager.getInstance().getConfigReader().getDevicename());
-				
+
 				cap.setCapability("appPackage", FileReaderManager.getInstance().getConfigReader().getappPackage());
-				
+
 				cap.setCapability("appActivity", FileReaderManager.getInstance().getConfigReader().getappActivity());
-				
+
 				URL url = new URL(FileReaderManager.getInstance().getConfigReader().geturl());
-				
+
 				driver = new AndroidDriver<MobileElement>(url, cap);
-				
 
 			} else if (appType.name().equals("HYBRIDE")) {
-				
+
 				System.out.println("Session is creating");
-				
-				DesiredCapabilities cap = new DesiredCapabilities();
-				
+
 				cap.setCapability("platformName", "Android");
-				
+
 				cap.setCapability("deviceName", FileReaderManager.getInstance().getConfigReader().getDevicename());
+
+				cap.setCapability("platformVersion",
+						FileReaderManager.getInstance().getConfigReader().getplatformversion());
+
+				cap.setCapability("udid", FileReaderManager.getInstance().getConfigReader().getudid());
+
+				cap.setCapability("automationName", FileReaderManager.getInstance().getConfigReader().getautomation());
 				
-				cap.setCapability("app", System.getProperty("user.dir") + FileReaderManager.getInstance().getConfigReader().getAppPath());
+				cap.setCapability("appPackage", FileReaderManager.getInstance().getConfigReader().getappPackage());
+
+				cap.setCapability("appActivity", FileReaderManager.getInstance().getConfigReader().getappActivity());
+
+
+				/*cap.setCapability("app", System.getProperty("user.dir")
+						+ FileReaderManager.getInstance().getConfigReader().getAppPath());*/
 				
 				URL url = new URL(FileReaderManager.getInstance().getConfigReader().geturl());
 
@@ -93,31 +103,33 @@ public class AppiumDriverManager {
 				System.out.println("Session is created");
 
 			} else if (appType.name().equals("WEBAPP")) {
-				
-				DesiredCapabilities cap = new DesiredCapabilities();
-				
+
+				// DesiredCapabilities cap = new DesiredCapabilities();
+
 				cap.setCapability("platformName", "Android");
-				
+
 				cap.setCapability("deviceName", FileReaderManager.getInstance().getConfigReader().getDevicename());
-				
+
 				cap.setCapability("browserName", "Chrome");
-				
+
 				URL url = new URL(FileReaderManager.getInstance().getConfigReader().geturl());
-				
+
 				driver = new AndroidDriver<MobileElement>(url, cap);
-				
+
 				driver.get("http://www.google.com");
 			}
 			
-			driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getimplicitywait(), TimeUnit.SECONDS);
+
+			driver.manage().timeouts().implicitlyWait(
+					FileReaderManager.getInstance().getConfigReader().getimplicitywait(), TimeUnit.SECONDS);
 
 		}
 
 		else if (FileReaderManager.getInstance().getConfigReader().getploatform().equals("IOS")) {
-			
+			DesiredCapabilities cap = new DesiredCapabilities();
+
 			if (appType.name().equals("NATIVE")) {
 
-				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setCapability("platformName", "ios");
 				cap.setCapability("deviceName", "HTC Desire 626 dual sim");
 				cap.setCapability("appPackage", "com.android.calculator2");
@@ -129,9 +141,9 @@ public class AppiumDriverManager {
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 			} else if (appType.name().equals("HYBRIDE")) {
-				
+
 				System.out.println("Session is creating");
-				DesiredCapabilities cap = new DesiredCapabilities();
+				// DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setCapability("platformName", "ios");
 				cap.setCapability("deviceName", "Nexus 9");
 				cap.setCapability("app", System.getProperty("user.dir") + "/app/ApiDemos.apk");
@@ -143,8 +155,8 @@ public class AppiumDriverManager {
 				System.out.println("Session is created");
 
 			} else if (appType.name().equals("chrome")) {
-				
-				DesiredCapabilities cap = new DesiredCapabilities();
+
+				// DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setCapability("platformName", "ios");
 				cap.setCapability("deviceName", "HTC Desire 626 dual sim");
 				cap.setCapability("browserName", "Chrome");
@@ -159,7 +171,7 @@ public class AppiumDriverManager {
 	}
 
 	public void closeDriver() {
-		
+
 		driver.quit();
 	}
 }

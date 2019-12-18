@@ -5,8 +5,10 @@ package com.Appium;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -51,6 +53,7 @@ public class Tutorial12 {
 		System.out.println("Session is created");
 		
 		
+		
 	}
 
 	@Test
@@ -60,7 +63,10 @@ public class Tutorial12 {
 		for (int i = 0; i <= 20; i++) {
 			try {
 				driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-			    MobileElement element = driver.findElementByAccessibilityId("Tabs");
+			   
+			    
+			   
+				 MobileElement element = driver.findElementByAccessibilityId("Tabs");
 				
 			    element.click();
 				
@@ -80,6 +86,16 @@ public class Tutorial12 {
 	}
 
 	public void verticalSwipe() {
+		 JavascriptExecutor js = (JavascriptExecutor)driver;
+			HashMap<String, String> swipeObject = new HashMap<String, String>();
+			swipeObject.put("direction", "up");
+			swipeObject.put("startX", "120");
+			swipeObject.put("startY", "650");
+			swipeObject.put("endX", "120");
+			swipeObject.put("endY", "35");
+			swipeObject.put("duration", "1.8");
+			js.executeScript("mobile: swipe", swipeObject);  //FAILS
+			js.executeScript("mobile: scroll", swipeObject); //FAILS
 		MobileElement element = driver.findElementByAccessibilityId("Tabs");
 		/*TouchActions action = new TouchActions(driver);
 		action.scroll(element, 10, 100);

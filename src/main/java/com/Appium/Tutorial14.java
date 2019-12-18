@@ -23,6 +23,7 @@ public class Tutorial14 {
 	@BeforeMethod
 	public void setUp() throws MalformedURLException
 	{
+		System.out.println("sessionId:-");
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("deviceName", "realme 3 Pro");
 		caps.setCapability("udid", "159b3828"); //Give Device ID of your mobile phone
@@ -30,7 +31,7 @@ public class Tutorial14 {
 		caps.setCapability("platformVersion", "9");
 		caps.setCapability("browserName", "Chrome");
 		//caps.setCapability("noReset", true);
-		//System.setProperty("webdriver.chrome.driver",System.getProperty("usr.dir")+"/libs/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",System.getProperty("usr.dir")+"/libs/chromedriver1.exe");
 		//URL url = new URL("http://0.0.0.0:4723/wd/hub");
 		//AppiumDriver<MobileElement> driver = null;
 		try {

@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61594" started-at="2019-12-11T07:48:38Z" finished-at="2019-12-11T07:49:40Z">
+  <suite name="Default suite" duration-ms="111620" started-at="2019-12-18T07:51:41Z" finished-at="2019-12-18T07:53:33Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.Appium.testrunner.ApidemoAppLaunch@20322d26]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.Appium.testrunner.AmazonAppLaunch@3c0f93f1]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="61594" started-at="2019-12-11T07:48:38Z" finished-at="2019-12-11T07:49:40Z">
-      <class name="com.Appium.testrunner.ApidemoAppLaunch">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.Appium.testrunner.ApidemoAppLaunch@20322d26]" name="setUpClass" is-config="true" duration-ms="341" started-at="2019-12-11T07:48:38Z" finished-at="2019-12-11T07:48:39Z">
+    <test name="Default test" duration-ms="111620" started-at="2019-12-18T07:51:41Z" finished-at="2019-12-18T07:53:33Z">
+      <class name="com.Appium.testrunner.AmazonAppLaunch">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.Appium.testrunner.AmazonAppLaunch@3c0f93f1]" name="setUpClass" is-config="true" duration-ms="673" started-at="2019-12-18T07:51:41Z" finished-at="2019-12-18T07:51:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="beforeclass()[pri:0, instance:com.Appium.testrunner.ApidemoAppLaunch@20322d26]" name="beforeclass" is-config="true" duration-ms="101" started-at="2019-12-11T07:48:39Z" finished-at="2019-12-11T07:48:39Z">
+        <test-method status="PASS" signature="beforeclass()[pri:0, instance:com.Appium.testrunner.AmazonAppLaunch@3c0f93f1]" name="beforeclass" is-config="true" duration-ms="527" started-at="2019-12-18T07:51:42Z" finished-at="2019-12-18T07:51:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeclass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.Appium.testrunner.ApidemoAppLaunch@20322d26]" name="feature" duration-ms="60319" started-at="2019-12-11T07:48:39Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-12-11T07:49:39Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.Appium.testrunner.AmazonAppLaunch@3c0f93f1]" name="feature" duration-ms="108253" started-at="2019-12-18T07:51:43Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-12-18T07:53:31Z">
           <params>
             <param index="0">
               <value>
@@ -29,15 +29,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.Appium.testrunner.ApidemoAppLaunch@20322d26]" name="tearDownClass" is-config="true" duration-ms="705" started-at="2019-12-11T07:49:39Z" finished-at="2019-12-11T07:49:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.Appium.testrunner.ApidemoAppLaunch@20322d26]" name="setup" is-config="true" duration-ms="0" started-at="2019-12-11T07:49:39Z" finished-at="2019-12-11T07:49:39Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.Appium.testrunner.AmazonAppLaunch@3c0f93f1]" name="setup" is-config="true" duration-ms="3" started-at="2019-12-18T07:53:31Z" finished-at="2019-12-18T07:53:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-      </class> <!-- com.Appium.testrunner.ApidemoAppLaunch -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.Appium.testrunner.AmazonAppLaunch@3c0f93f1]" name="tearDownClass" is-config="true" duration-ms="1818" started-at="2019-12-18T07:53:31Z" finished-at="2019-12-18T07:53:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.Appium.testrunner.AmazonAppLaunch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

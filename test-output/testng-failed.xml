@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Appium.testrunner.ApidemoAppLaunch">
+      <class name="com.Appium.Tutorial9">
         <methods>
-          <include name="setUpClass"/>
-          <include name="setup"/>
-          <include name="feature" invocation-numbers="0"/>
-          <include name="beforeclass"/>
-          <include name="tearDownClass"/>
+          <include name="setUp"/>
+          <include name="addTwoNumber"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.Appium.testrunner.ApidemoAppLaunch -->
+      </class> <!-- com.Appium.Tutorial9 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

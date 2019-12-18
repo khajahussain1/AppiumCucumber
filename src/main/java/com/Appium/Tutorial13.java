@@ -2,9 +2,11 @@ package com.Appium;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -32,6 +34,7 @@ public class Tutorial13 {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// System.out.println("Session is created");
+		
 	}
 
 	@Test
